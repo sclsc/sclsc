@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\ClosingOfFile;		interface Deletable	{		public function deleteDiary($diaryId);	}?>

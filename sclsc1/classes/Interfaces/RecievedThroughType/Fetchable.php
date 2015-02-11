@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\RecievedThroughType;		interface Fetchable	{		public function getThroughType();		public function checkThroughType($through_type);	}?>

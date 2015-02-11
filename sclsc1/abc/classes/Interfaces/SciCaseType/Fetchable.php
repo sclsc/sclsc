@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\SciCaseType;		interface Fetchable	{			}?>

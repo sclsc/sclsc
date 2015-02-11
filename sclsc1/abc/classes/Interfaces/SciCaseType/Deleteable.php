@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\SciCaseType;		interface Deleteable	{		/**		 * 		 * @param unknown $applicationId		 */		public function delScCaseType($applicationId);	}?>

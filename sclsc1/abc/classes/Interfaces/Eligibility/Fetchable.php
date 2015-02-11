@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\Eligibility;		interface Fetchable	{		/**		 * 		 * @param unknown $condition_name		 */		public function checkForDuplicateEligibilityCondition($condition_name);				/**		 * 		 */		public function getAllEligibilityCondition();	}?>

@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\DocInAppliType;		interface Addable	{			   /*	    *	   * This function will insert Document Request Type	   * @return - This function returns true if insertion query excute successfully	   */	   	   	  public function addDocRequestType($applicationId,$docId);	   	   	   			}?>

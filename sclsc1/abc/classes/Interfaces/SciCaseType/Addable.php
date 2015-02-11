@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\SciCaseType;		interface Addable	{		/**		 * 		 * @param unknown $name		 */		public function addScCaseType($name);	}?>

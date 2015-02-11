@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\ClosingOfFile;		interface Fetchable	{				public function getMiscApplicationDetails($stageId, $subStageId, $limit, $start);		public function getMiscApplicationCount($stageId, $subStageId);					public function getLetterAddresseTo($lettersDispId);				public function getLetterAddresseCopyTo($lettersDispId);								}?>

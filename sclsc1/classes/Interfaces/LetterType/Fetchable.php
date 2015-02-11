@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\LetterType;		interface Fetchable	{				/**		 * This function returns all LetterType as an array which are enabled		 *				 *		 */				public function getAllLetterTypes();										}?>

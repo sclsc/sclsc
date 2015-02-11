@@ -1,0 +1,162 @@
+<div id='cssmenu'>
+	<ul id="menuv">
+	   <li class='parent' id="home"><a style="" href='index.php'><span><span style="text-decoration: underline">H</span>ome</span></a></li>
+	   <!-- <li class='parent' id="diary"><a href='diary.php'><span><span><span style="text-decoration: underline">D</span>iary</span></a></li>-->
+	   <li class='parent' id="download"><a href='download.php'><span>
+	   <li class='last' id="profile"><a href='applications.php'>Applications</a></li>
+	   <span>Do<span style="text-decoration: underline">w</span>nload</span></a></li>
+	   <li class='last' id="profile"><a href='high_court.php'>High Court</a></li>
+	   <li class='last' id="profile"><a href='hc_case_type.php'>HC Case Type</a></li>
+	   <li class='last' id="profile"><a href='sc_case_type.php'>SC Case Type</a></li>
+	   <li class='last' id="profile"><a href='application_through_type.php'>Through Type</a></li>
+	   <li class='last' id="profile"><a href='application_through.php'>Through</a></li>
+	    <li class='last' id="profile"><a href='application_type.php'>Application Type</a></li>
+	     <li class='last' id="profile"><a href='stages.php'>Stages</a></li>
+	     <li class='last' id="profile"><a href='backlog_advocate.php'>Advocates</a></li>
+	     <li class='last' id="profile"><a href='backlog_senior_advocate.php'>Senior Advocates</a></li>
+	    <li class='last' id="profile"><a href='profile.php'><span><span><span style="text-decoration: underline">P</span>rofile</span></a></li>
+	</ul>
+</div>
+<script type="text/javascript">
+        document.onkeydown = function(e) {
+			e = e || window.event; // because of Internet Explorer quirks...
+            k = e.which || e.charCode || e.keyCode; // because of browser differences...
+			
+            if (k == 49 && !e.altKey && !e.ctrlKey && !e.shiftKey) {
+                document.getElementById("check1").checked = true;
+            } else {
+                return true; // it's not a key we recognize, move on...
+            }
+            return false; // we processed the event, stop now.
+        }
+    </script>
+<script type="text/javascript">
+    var count = $("#menuv > li").length;
+    var menuli = document.getElementById('menuv').getElementsByTagName('li');
+    var nrmenuli = menuli.length;
+    //alert(nrmenuli);
+    var pli = [];       
+    var plii = [];
+    var crt_pli;         
+    var cli = [];        
+    var abc = [];
+    var npli = 0;       
+    var ncli = 0;
+    var abc = [];
+    var url_adr = '';
+    var a = 0;
+    var nplii=0;
+    for(var i=0; i<nrmenuli; i++) {
+	if(menuli[i].className == 'parent' || menuli[i].className == 'last' || menuli[i].className == 'active has-sub' || menuli[i].className == 'has-sub')  {
+	pli.push(menuli[i]) ;
+      }
+    }
+    for(var i=0; i<nrmenuli; i++) {
+	if(menuli[i].className == 'parent' || menuli[i].className == 'last' || menuli[i].className == 'active has-sub' || menuli[i].className == 'has-sub')  {
+	plii.push(menuli[i]) ;
+      }
+    }
+    var ip = -1;    
+    var ic = -1;    
+
+    function showpli(index) {
+	    url_adr = '';
+	    for(var i=0; i<npli; i++) {
+	  pli[i].className = '';
+      }
+      crt_pli = pli[index];
+      crt_pli.className = 'active';
+      if(crt_pli.getElementsByTagName('ul').length > 0 && crt_pli.getElementsByTagName('ul')[0].getElementsByTagName('li')) {
+		cli = crt_pli.getElementsByTagName('ul')[0].getElementsByTagName('li');
+		abc = crt_pli;
+		ncli = cli.length;
+		crt_pli.className = 'active has-sub';
+	      }
+	      else {
+		    if(crt_pli.getElementsByTagName('a').length > 0) setUrlAdr(crt_pli.getElementsByTagName('a')[0]);
+		cli = [];
+		ncli = 0;
+	}
+    }
+
+    function showcli(index) {
+      url_adr = ' ';
+      
+      if(ncli > 0) {
+	    ip = -1;
+	    crt_pli.getElementsByTagName('ul')[0].style="display:block";
+	    npli = cli.length;
+	    pli = cli;
+	    if(index >= 0) {
+	    cli[index].className = '';
+	if(cli[index].getElementsByTagName('a').length > 0) setUrlAdr(cli[index].getElementsByTagName('a')[0]);
+	}
+      }
+    }
+
+    function setUrlAdr(link) {
+      url_adr = link.href;
+    }
+    
+    function showleftli() {
+      abc.getElementsByTagName('ul')[0].style="display:none";
+      abc.getElementsByTagName('ul')[0].getElementsByTagName('li')[0].className = '';
+      for(var i=0; i<count; i++) {
+	  if(plii[i].className == 'active has-sub')
+	  {
+	      ip = i;
+	      pli = plii;
+	  }
+      }
+    }
+    function KeyCheck(e){
+      npli = pli.length;
+      
+      var keyid = (window.event) ? event.keyCode : e.keyCode; 
+
+      if (keyid == 72 && e.altKey && !e.ctrlKey && !e.shiftKey) {
+          location.href="index.php"
+      }
+      else if (keyid == 68 && e.altKey && !e.ctrlKey && !e.shiftKey) {
+          location.href="diary.php";
+      }
+      else if (keyid == 87 && e.altKey && !e.ctrlKey && !e.shiftKey) {
+          location.href="download.php";
+      }
+      else if (keyid == 80 && e.altKey && !e.ctrlKey && !e.shiftKey) {
+          location.href="profile.php";
+      }  
+      switch(keyid) {
+	  // Left
+	  case 37:
+	    showleftli(ip);
+	    break;
+	  // Up
+	  case 38:
+	  //  alert('up');
+	    ip--;
+	    if(ip < 0) ip = 0;
+	    showpli(ip);
+	    break;
+	  // Right
+	  case 39:
+	    ic++;
+	    if(ic >= ncli) ic = 0;
+	    //alert(ncli);
+	    showcli(ic);
+	    break;
+	  // Down
+	  case 40:
+	  //  alert('down');
+	    ip++;
+	  //  alert(ip);
+	    if(ip >= npli) ip = 0;
+	    showpli(ip);
+	    break;
+	  case 13:
+	    if(url_adr != '') window.location = url_adr;
+	    break;
+      }
+    }
+	document.onkeydown = KeyCheck;
+    </script>

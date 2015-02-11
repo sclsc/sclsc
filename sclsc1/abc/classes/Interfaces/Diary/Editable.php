@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\Diary;		interface Editable	{						public function updateDiary($id,$category,$letterNo,$letterDate,$received_through,$sender,$mailId,$contactNumber,									  $fatherName,$address1,$address2,$city,$state,$pincode,$subject,$description,$markTo);		public function updateDiaryStatus($id);			}?>

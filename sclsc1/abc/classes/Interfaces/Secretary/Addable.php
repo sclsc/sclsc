@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\Secretary;		interface Addable	{		/*		* Start Function addState()		* This function will insert state 		* @return - This function returns status of insertion		*/				public function addState($state_name);				/*		 * End Function addState()		*/	}?>

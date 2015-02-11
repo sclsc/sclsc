@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\ApplicationTypes;		interface Deletable	{		/**		 * this fuction will delete all recards of Application from database		 * @param integer $advocateId		 */			public function delApplication($applicationId);						}?>

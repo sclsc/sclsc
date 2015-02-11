@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\Eligibility;		interface Addable	{		/**		 * 		 */		function addElegibilityCondition($condition_name);	}?>

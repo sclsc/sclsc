@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\RecievedThrough;		interface Deleteable	{		/**		 * 		 * @param unknown $applicationId		 */		public function delRecievedThrough($applicationId);	}?>

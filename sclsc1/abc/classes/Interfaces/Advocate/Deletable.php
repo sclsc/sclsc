@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\Advocate;		interface Deletable	{		/**		 * this fuction will delete all recards of advocate from database		 * @param unknown $advocateId		 */			public function delAvocate($advocateId);					}?>

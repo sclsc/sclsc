@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\SciCaseType;		interface Editable	{		/**		 * 		 * @param unknown $case_type_id		 * @param unknown $case_type_name		 */		public function updateScCaseType($case_type_id,$case_type_name);	}?>

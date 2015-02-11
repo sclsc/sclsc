@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\Diary;		interface Deletable	{		public function deleteDiary($diaryId);	}?>

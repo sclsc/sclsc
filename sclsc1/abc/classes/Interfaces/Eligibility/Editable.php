@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\Eligibility;		interface Editable	{		/**		 * 		 * @param unknown $condition_id		 * @param unknown $condition_name		 */		public function updateEligibityCondition($condition_id,$condition_name);	}?>

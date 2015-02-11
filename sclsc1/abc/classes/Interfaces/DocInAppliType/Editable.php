@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\DocInAppliType;		interface Editable	{			     	  	     	/**	     	 * this function will update Application Type	     	 * @param integer $doc_id	     	 * @param boolean $is_active	     	 */	     	    	public function updateDocAplliType($doc_id,$is_active,$hiddenDoc);	     					}?>

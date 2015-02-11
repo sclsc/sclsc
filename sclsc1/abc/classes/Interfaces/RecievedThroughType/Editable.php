@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\RecievedThroughType;		interface Editable	{		/**		 * 		 * @param unknown $id		 * @param unknown $appli_through_type_name		 */		public function updateRecievedThroughType($id,$appli_through_type_name);	}?>

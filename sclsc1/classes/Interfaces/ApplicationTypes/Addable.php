@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\ApplicationTypes;		interface Addable	{		/*		*		* This function will insert Application Type		* @return - This function returns true if insertion query excute successfully 		*/			   public function addApplicationType($name);	   			}?>

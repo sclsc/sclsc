@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\Category;		interface Addable	{		/*		* Start Function addState()		* This function will insert state 		* @return - This function returns status of insertion		*/				/**		 * 		 * @param unknown $category_name		 */		public function addCategory($category_name) ;				/*		 * End Function addState()		*/	}?>

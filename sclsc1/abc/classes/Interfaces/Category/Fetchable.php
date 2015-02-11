@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\Category;		interface Fetchable	{		public function getEnabledCategoryIds();				public function getDisabledCategoryIds();				public function getCategoryName($categoryId);	}?>

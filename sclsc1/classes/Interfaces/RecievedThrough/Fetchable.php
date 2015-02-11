@@ -1,0 +1,1 @@
+<?php	namespace classes\Interfaces\RecievedThrough;		interface Fetchable	{		/**		 * 		 */		public function checkThrough($appli_through_type_name);		public function getAllReceivedThrough($limit,$start);		public function getAllReceivedThroughCount();		public function getThrough($id);	}?>
